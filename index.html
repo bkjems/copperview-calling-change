@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Copperview Stake - Calling Change</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light">
+  <div class="header">
+    <h2><span id="stakeName"></span><br><span class="header-subtitle">Calling Change Request</span></h2>
+    <button type="button" id="modeToggle" onclick="toggleMode()" aria-label="Toggle light and dark mode">&#9789;</button>
+  </div>
+  <form id="callingChangeForm">
+    <label for="ward">Ward</label>
+    <select id="ward" name="ward" required onchange="autoSelectBuilding(this.value)">
+      <option value="">-- Select Ward --</option>
+    </select>
+
+    <label for="building">Building</label>
+    <select id="building" name="building" required>
+      <option value="">-- Select Building --</option>
+    </select>
+
+    <label for="changeType">Change Type</label>
+    <select id="changeType" name="changeType" required>
+      <option value="">-- Select Change Type --</option>
+      <option value="new">New Calling</option>
+      <option value="replace">Replace Existing Calling</option>
+    </select>
+
+    <label for="bulkChanges">Calling Changes</label>
+    <textarea id="bulkChanges" name="bulkChanges" required rows="5"
+      placeholder="Include: Name, Email, Calling.&#10;Add as many as needed."></textarea>
+
+    <div id="message" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div class="btn-row">
+      <button type="submit" class="submit-btn">Submit Request</button>
+      <button type="button" class="cancel-btn" onclick="confirmCancel()">Cancel</button>
+    </div>
+  </form>
+
+  <script src="config.js"></script>
+  <script src="calling-change.js"></script>
+</body>
+</html>
