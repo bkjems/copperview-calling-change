@@ -38,6 +38,8 @@ input, select, textarea {
 }
 textarea {
   resize: vertical;
+  -webkit-appearance: auto;
+  min-height: 120px;
 }
 input[type="date"], input[type="time"] {
   text-align: left;
