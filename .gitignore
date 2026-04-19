@@ -3,3 +3,4 @@
 node_modules
 callingChanges.gs
 .vscode/settings.json
+test-results/.last-run.json
