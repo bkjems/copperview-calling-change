@@ -143,7 +143,7 @@ test.describe('Calling Change Form', () => {
 
     await page.selectOption('#ward', '7th Ward');
     await page.selectOption('#changeType', 'new');
-    await page.fill('#bulkChanges', 'Test Person, test@email.com, Bishop');
+    await page.fill('#bulkChanges', 'Test Person, test@example.com, Bishop');
 
     await page.click('.submit-btn');
     await expect(page.locator('#message')).toHaveText('Calling change request submitted successfully!');
@@ -156,7 +156,7 @@ test.describe('Calling Change Form', () => {
       ward: '7th Ward',
       building: '3200 Building',
       changeType: 'new',
-      bulkChanges: 'Test Person, test@email.com, Bishop',
+      bulkChanges: 'Test Person, test@example.com, Bishop',
     });
   });
 
